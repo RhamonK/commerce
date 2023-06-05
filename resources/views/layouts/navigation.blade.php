@@ -15,9 +15,11 @@
                     <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
                         {{ __('Acceuil') }}
                     </x-nav-link>
+                    @auth
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @endauth
                     <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')">
                         {{ __('Boutique') }}
                     </x-nav-link>
@@ -30,8 +32,16 @@
                 </div>
             </div>
 
+
+
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <div class="search-area">
+                    <form action="{{route('products.index')}}" method="get">
+                        <input type="search" name="search" id="headerSearch" placeholder="Type for search">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
                 <navbar-cart></navbar-cart>
                 @auth
                     <x-dropdown align="right" width="48">

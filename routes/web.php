@@ -4,6 +4,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PostController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -23,9 +24,9 @@ Route::get('/', function () {
     return view('welcome', ["products" => $products]);
 })->name('welcome');
 
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
+Route::get('/blog', [PostController::class, 'index'])->name('blog');
+
+Route::get('/singleblog/{post}', [PostController::class, 'show'])->name('singleblog');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -37,6 +38,8 @@ Route::get('checkout', [CheckoutController::class, 'create'])
 Route::post('paymentIntent', [CheckoutController::class, 'paymentIntent'])
     ->name('checkout.paymentIntent');
 Route::resource('products', ProductController::class);
+
+Route::resource('posts', PostController::class);
 
 Route::get('shoppingCart', [CartController::class, 'index'])
     ->name('cart.index');
