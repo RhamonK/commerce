@@ -31,33 +31,19 @@
                     <div class="top_catagory_area section-padding-80 clearfix">
                         <div class="container">
                             <div class="row justify-content-center">
+                                @foreach ($categories as $category)
+
                                 <!-- Single Catagory -->
                                 <div class="col-12 col-sm-6 col-md-4">
                                     <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                                        style="background-image: url(img/bg-img/bg-2.jpg);">
-                                        <div class="catagory-content">
-                                            <a href="#">Vêtements</a>
-                                        </div>
+                                    style="background-image: url({{$category->image}});">
+                                    <div class="catagory-content">
+                                        <a href="{{route('products.index')}}?category={{$category->name}}">{{$category->name}}</a>
                                     </div>
                                 </div>
-                                <!-- Single Catagory -->
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                                        style="background-image: url(img/bg-img/nbbb.webp);">
-                                        <div class="catagory-content">
-                                            <a href="#">Chaussures</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Catagory -->
-                                <div class="col-12 col-sm-6 col-md-4">
-                                    <div class="single_catagory_area d-flex align-items-center justify-content-center bg-img"
-                                        style="background-image: url(img/bg-img/bg-4.jpg);">
-                                        <div class="catagory-content">
-                                            <a href="#">Accessoires</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+                            @endforeach
+
                             </div>
                         </div>
                     </div>
@@ -72,9 +58,9 @@
                                         style="background-image: url(img/bg-img/bg-5.jpg);">
                                         <div class="h-100 d-flex align-items-center justify-content-end">
                                             <div class="cta--text">
-                                                <h6>-20%</h6>
+                                                <h6>Nouveauté</h6>
                                                 <h2>Vente globale</h2>
-                                                <a href="#" class="btn essence-btn">Acheter maintenant</a>
+                                                <a href="{{route('products.index')}}" class="btn essence-btn">Acheter maintenant</a>
                                             </div>
                                         </div>
                                     </div>

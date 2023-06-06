@@ -1,3 +1,6 @@
+@php
+    $categories = \App\Models\Category::all();
+@endphp
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,9 +19,9 @@
                         {{ __('Acceuil') }}
                     </x-nav-link>
                     @auth
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                            {{ __('Dashboard') }}
+                        </x-nav-link>
                     @endauth
                     <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')">
                         {{ __('Boutique') }}
@@ -36,12 +39,18 @@
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
-                <div class="search-area">
-                    <form action="{{route('products.index')}}" method="get">
+                <form action="{{ route('products.index') }}" method="get" class="flex">
+                    <select name="category">
+                        <option value="all">Tout</option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->name }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                    <div class="search-area">
                         <input type="search" name="search" id="headerSearch" placeholder="Type for search">
                         <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </div>
+                    </div>
+                </form>
                 <navbar-cart></navbar-cart>
                 @auth
                     <x-dropdown align="right" width="48">

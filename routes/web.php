@@ -5,6 +5,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PostController;
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +22,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $products = Product::take(4)->get();
-    return view('welcome', ["products" => $products]);
+    $categories = Category::take(3)->get();
+    return view('welcome', ["products" => $products, 'categories' => $categories]);
 })->name('welcome');
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
