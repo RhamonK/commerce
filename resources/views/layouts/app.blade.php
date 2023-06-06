@@ -93,7 +93,7 @@
                     <div class="single_widget_area">
                         <div class="footer_social_area">
                             <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://instagram.com/habille.toi.bien_?igshid=MzRlODBiNWFlZA==" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="top" title="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>

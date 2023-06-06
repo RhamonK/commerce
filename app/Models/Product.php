@@ -30,6 +30,6 @@ class Product extends Model
 
     public function getFormattedPriceAttribute(): string
     {
-        return str_replace('.', ',', $this->price / 100) . ' XOF';
+        return str_replace('.', ',', $this->price ) . ' XOF';
     }
 }

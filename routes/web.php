@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $products = Product::take(4)->get();
+    $products = Product::inRandomOrder()->take(4)->get();
     $categories = Category::take(3)->get();
     return view('welcome', ["products" => $products, 'categories' => $categories]);
 })->name('welcome');

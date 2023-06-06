@@ -14,11 +14,20 @@
         </div>
 
         <div class="contact-info">
-            <h2>How to Find Us</h2>
-            <p>Mauris viverra cursus ante laoreet eleifend. Donec vel fringilla ante. Aenean finibus velit id urna vehicula, nec maximus est sollicitudin.</p>
+            <h2>À propos de nous</h2>
+            <p>HabilleToiBien (HTB) est une entreprise de vente en ligne crée le 03 Juillet 2021,
+                spécialisée dans la vente de vetêments et accessoires. Nous sommes plus qu'une simple
+                entreprise de vente en ligne, nous organisons des jeux et faisons gagner plein de cadeaux à nos
+                clients aussi bien en ligne que lors des évènements culturels qui se déroulent à Lomé. Nous
+                prévoyons tout plein de choses avec la creation de notre application et sommes sur le point
+                d'ouvrir une boutique physique dans laquelle nous allons tourner des vidéos avec nos clients,
+                organiser des meet-ups et passer plus de temps avec eux. Nous pensons à réunir tous nos clients
+                et amoureux de chaussures dans une communauté instructive et recréative à la fois. Ramener
+                des paires et vêtements rares sur le marché pour pouvoir donner à tous l'opportunité de porter ce
+                qu'ils aiment mais qu'ils ne trouvent pas forcémént sur le marché togolai</p>
 
             <div class="contact-address mt-50">
-                <p><span>address:</span> 10 Suffolk st Soho, London, UK</p>
+                <p><span>address:</span> Totsi, LOmé, TOGO</p>
                 <p><span>telephone:</span> +228 70878998</p>
                 <p><a href="mailto:contact@essence.com">habilletoibien2021@gmail.com</a></p>
             </div>

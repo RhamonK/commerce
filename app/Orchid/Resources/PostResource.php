@@ -90,9 +90,9 @@ class PostResource extends Resource
         return [
             'title' => [
                 'required',
-                Rule::unique(self::$model, 'name')->ignore($model),
+                Rule::unique(self::$model, 'title')->ignore($model),
             ],
-            'description' => [
+            'content' => [
                 'required'
             ]
         ];

@@ -10,7 +10,7 @@ class PostController extends Controller
 
     public function index(Request $request)
     {
-        $posts = post::all();
+        $posts = post::inRandomOrder()->get();
         return view('blog', ['posts' => $posts]);
     }
 
@@ -33,7 +33,7 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show(post $post)
     {
             return view('singleblog', ["post" => $post]);
     }
